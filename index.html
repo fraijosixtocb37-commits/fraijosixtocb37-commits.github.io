@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfeando Bugs - Blog del Ciclo de Vida del Software</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/png" href="images/iconepage.jpg">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="blog-header">
+        <h1>Surfeando Bugs</h1>
+        <div class="search-bar">
+            <input id="searchInput" type="text" placeholder="Buscar en Google...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <section class="main-content">
+            <h2>“Surfeando bugs, reinicios y malas vibras desde el espacio.”</h2>
+            <p>
+                Bienvenido a <strong>Surfeando Bugs</strong>, un espacio donde un alien surfer
+                intenta mantener el equilibrio en la ola interminable del desarrollo de software.
+                Aquí no tememos a los bugs, los abrazamos. Cada fase del ciclo —análisis, diseño,
+                codificación, prueba y mantenimiento— es solo otra ola por surfear.
+            </p>
+            <img src="images/iconepage.jpg" width="400">
+           <h2>¿Que es el ciclo de vida del software?</h2>
+           <p>El ciclo de vida del software es el conjunto de etapas que atraviesa un proyecto de software desde la concepción hasta su retiro o reemplazo</p>
+           <p>Se trata de una hoja de ruta que ayuda a planificar, organizar, ejecutar y mantener el software. A lo largo del ciclo, se hacen revisiones, pruebas, ajustes y mejoras continuas.</p>
+           <p>En la práctica, cada organización adapta este ciclo: puede combinar etapas, iterar, o hacer que algunas fases se superpongan. Pero los “bloques básicos” tienden a repetirse.</p>
+           <h2>¿Por qué es importante conocer el ciclo de vida del software?</h2>
+           <p>Entender el ciclo de vida del software permite a los equipos trabajar de forma más organizada, reducir errores y entregar productos de mejor calidad.
+Además, ayuda a prever los recursos necesarios, controlar los tiempos y mantener una comunicación clara entre desarrolladores, clientes y usuarios.
+</p>
+        <p>Cada fase tiene su propio propósito y entregables, y juntas garantizan que el software cumpla con las expectativas desde su planeación hasta su mantenimiento</p>
+       
+        <h2>Etapas del ciclo de vida del software</h2>
+        <p><strong>Planificacion:</strong> Definir visión del proyecto, objetivos, viabilidad, alcance, recursos, cronograma. Estudio de viabilidad, plan del proyecto, análisis preliminar de riesgos. Subestimar costos, no definir bien límites del proyecto (scope creep).</p>
+        <p><strong>Analisis de requisitos:</strong> Recoger y documentar lo que el cliente/usuario necesita, tanto funcional como no funcional. Documento de requisitos (SRS), casos de uso, historias de usuario. Requisitos ambiguos, cambios constantes, falta de involucramiento del cliente</p>
+        <p><strong>Diseño:</strong> Planear la arquitectura, la estructura del sistema, interfaces, bases de datos, componentes. Diseño de alto nivel, diseño de bajo nivel, diagramas (UML, ER, flujo), prototipos. Diseño poco escalable, ignorar aspectos no funcionales (rendimiento, seguridad).</p>
+        <p><strong>Codificación:</strong> Escribir el código según el diseño, módulo por módulo, integrar componentes. Código fuente, librerías, módulos, APIs, documentación técnica. Deuda técnica, falta de estándares, integración defectuosa entre módulos.</p>
+        <p><strong>Pruebas:</strong> Verificar que el software cumple con los requisitos y no tiene defectos. Informes de pruebas, casos de prueba, reportes de errores, pruebas de regresión. Cobertura insuficiente, pruebas mal diseñadas, errores en ambiente de producción</p>
+        <p><strong>Despliegue:</strong> Poner el software en el entorno de producción, migrar datos, capacitar usuarios. Release / versión de producción instalada, plan de lanzamiento, manuales de usuario. Problemas con el entorno real, fallas en migración de datos, errores de configuración.</p>
+        <p><strong>Mantenimiento:</strong> Corregir errores, mejorar funcionalidades, adaptarse a cambios de entorno, soporte continuo. Actualizaciones, parches, versiones posteriores, soporte técnico. Software obsoleto, dependencia de versiones antiguas, costos de mantenimiento elevados</p>
+         
+        <h2>Tabla comparativa</h2>
+        <p>A continuacion se muestra una tabla comparativa con las etapas de ambos autores</p>
+        <p><strong>Pressman</strong></p>
+        <P><strong>Fabregas</strong></P>
+        <img src="images/tabla.png" width="900">
+
+
+        </section>
+        <aside class="sidebar">
+            <h3>Más información</h3>
+            <p>Explora algunos sitios útiles sobre el ciclo de vida del software:</p>
+            <div class="links">
+                <a href="https://es.wikipedia.org/wiki/Ciclo_de_vida_del_software" target="_blank">Wikipedia</a>
+                <a href="https://www.ibm.com/topics/software-development-life-cycle" target="_blank">IBM - SDLC</a>
+                <a href="https://www.geeksforgeeks.org/software-engineering-software-development-life-cycle-sdlc/" target="_blank">GeeksForGeeks</a>
+                <a href="https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-sdlc/" target="_blank">Microsoft Azure</a>
+            </div>
+        </aside>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 - Fraijo Servin Sixto Alonso | Surfeando Bugs 🌊👾</p>
+    </footer>
+
+    <!-- SCRIPT DEL BUSCADOR -->
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+
+        function buscar() {
+            const query = searchInput.value.trim();
+            if (query) {
+                const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(url, "_blank");
+            }
+        }
+
+        searchBtn.addEventListener("click", buscar);
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") buscar();
+        });
+    </script>
+
+</body>
+</html>

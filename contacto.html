@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Surfeando Bugs</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/png" href="images/iconepage.jpg">
+</head>
+<body>
+
+    <header class="blog-header">
+        <h1>Contacto</h1>
+        <div class="search-bar">
+            <input id="searchInput" type="text" placeholder="Buscar en Google...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="main-content">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes preguntas, sugerencias o simplemente quieres saludar?  
+               Rellena el siguiente formulario y nos pondremos en contacto contigo.</p>
+
+            <form class="contact-form" action="https://formsubmit.co/ciclovida@gmail.com" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="index.html">
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Otras formas de contacto</h3>
+            <p>Puedes seguirnos en nuestras redes o explorar más contenido técnico:</p>
+            <div class="links">
+                <a href="https://www.instagram.com/ciclodevidasw_final_final2_?igsh=MWhrc3ptaWV5aHc4Yg==">Instagram</a>
+                <img src="images/AlienExtra.png" width="300">
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Fraijo Servin Sixto Alonso | Surfeando Bugs 🌊👾</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+
+        function buscar() {
+            const query = searchInput.value.trim();
+            if (query) {
+                const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(url, "_blank");
+            }
+        }
+
+        searchBtn.addEventListener("click", buscar);
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") buscar();
+        });
+    </script>
+
+</body>
+</html>
